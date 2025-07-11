@@ -1,144 +1,166 @@
-html{
-    font-family: 'Calibri', sans-serif;
-    background: #ffffff;
+html { /* Definiše osnovne stilove za ceo dokument */
+    font-family: 'Calibri', sans-serif; /* Postavlja font na Calibri kao primarni, sans-serif kao fallback */
+    background: #ffffff; /* Postavlja belu boju pozadine za ceo dokument */
 }
-.tpr {
-    color: #7D1F1F;
-}
-.tsg {
-    color: #555555;
-}
-.tab {
-    color: #6699CC;
-}
-.okvirkocke{
-    position: relative;
-    border: 2px solid #323232;
-    width: 100vw;
-    height: 100vh;
-}
-.okvirlk{
-    position: absolute;
-    background-color: #ededed;
-    top: 25%;
-    right: 25%;
-    bottom: 25%;
-    left: 25%;
-    justify-items: center;
-    align-content: center;
-}
-.licna-karta{
-    align-content: center;
-    justify-content: center ;
-    display:grid ;
-    width: 510px;
-    height: 330px;
-    padding: 4px, 8px;
-    border: 3px solid #323232;
-    border-radius: 15px;
-    grid-template:  "sg bp rep rep rep"
-                    "sg bp lk lk lk"
-                    "fo fo pre pre cg"
-                    "fo fo ime ime cg"
-                    "fo fo dr dr cg"
-                    "fo fo pol reg ss"
-                    "fo fo diz diz ss"
-                    "fo fo dva dva ss"
-                    "di di di di po";
-    grid-template-columns: 80px 80px 100px 100px 130px;
-    grid-template-rows: 30px 30px 35px 35px 35px 35px 35px 35px 35px;
-}           
 
-.sg{
-    grid-area: sg;
-    justify-self: center;
-    align-self: center;
+.tpr { 
+    color: #7D1F1F; /* Definiše boju teksta tamno crvene nijanse, trenutno se ne koristi u HTML-u */
 }
-.rep{
-    grid-area: rep;
-    justify-self: left;
-    align-self: top;
+
+.tsg {
+    color: #555555; /* Definiše sivu boju teksta, takođe trenutno nije korišćeno u HTML-u */
 }
-.lk{
-    grid-area:lk;
-    justify-self: left;
-    align-self: top;
+
+.tab {
+    color: #6699CC; /* Svetlo plava boja teksta, ni ova klasa trenutno nije aktivna u HTML-u */
 }
-.fo{
-    grid-area: fo;
-    justify-self: center;
-    align-self: center;
-    width: calc(100% - 10px);
-    height: auto; 
-    box-sizing: border-box;
+
+.okvirkocke { /* Glavni kontejner koji pokriva celu stranicu */
+    position: relative; /* Postavlja relativnu poziciju za lakše pozicioniranje unutrašnjih elemenata */
+    border: 2px solid #323232; /* Tanka tamno siva ivica oko celog prozora */
+    width: 100vw; /* Širina preko celog viewport-a */
+    height: 100vh; /* Visina preko celog viewport-a */
 }
-.pre{
-    grid-area: pre;
-    justify-self: left;
-    align-self: top;
+
+.okvirlk { /* Kontejner unutar okvirkocke koji pozicionira ličnu kartu */
+    position: absolute; /* Apsolutna pozicija u odnosu na roditeljski element */
+    background-color: #ededed; /* Svetlo siva pozadina */
+    top: 25%; /* Pozicioniranje sa vrha 25% od visine viewport-a */
+    right: 25%; /* Isto sa desne strane */
+    bottom: 25%; /* Sa donje strane */
+    left: 25%; /* Sa leve strane, efekat: okvir je tačno u sredini */
+    justify-items: center; /* Centriranje elemenata po horizontalnoj osi unutar grid-a (ne važi bez display:grid ili flex) */
+    align-content: center; /* Centriranje sadržaja po vertikalnoj osi unutar grid-a (ne važi bez display:grid) */
 }
-.ime{
-    grid-area: ime;
-    justify-self: left;
-    align-self: top;
+
+.licna-karta { /* Glavni grid kontejner za raspored svih elemenata na kartici */
+    align-content: center; /* Centriranje po vertikalnoj osi unutar grid-a */
+    justify-content: center; /* Centriranje po horizontalnoj osi unutar grid-a */
+    display: grid; /* Aktivira CSS Grid layout */
+    width: 510px; /* Fiksna širina lične karte */
+    height: 330px; /* Fiksna visina lične karte */
+    padding: 4px, 8px; /* GREŠKA: treba padding: 4px 8px; bez zareza — trenutno CSS ignoriše ovu liniju */
+    border: 3px solid #323232; /* Tanja crna ivica oko kartice */
+    border-radius: 15px; /* Zaobljeni uglovi */
+    grid-template: 
+        "sg bp rep rep rep"
+        "sg bp lk lk lk"
+        "fo fo pre pre cg"
+        "fo fo ime ime cg"
+        "fo fo dr dr cg"
+        "fo fo pol reg ss"
+        "fo fo diz diz ss"
+        "fo fo dva dva ss"
+        "di di di di po"; /* Definiše raspored grid area po redovima */
+    grid-template-columns: 80px 80px 100px 100px 130px; /* Širina kolona unutar grid-a */
+    grid-template-rows: 30px 30px 35px 35px 35px 35px 35px 35px 35px; /* Visina redova unutar grid-a */
 }
-.dr{
-    grid-area: dr;
-    justify-self: left;
-    align-self: top;
+.sg { /* Stilizacija za sliku grba (Grb-sivo) */
+    grid-area: sg; /* Povezuje sa grid-template area 'sg' definisanom u parentu */
+    justify-self: center; /* Centriranje elementa horizontalno unutar svoje grid ćelije */
+    align-self: center; /* Centriranje elementa vertikalno unutar svoje grid ćelije */
 }
-.pol{
-    grid-area: pol;
-    justify-self: left;
-    align-self: top;
+
+.rep { /* Kontejner za naziv države (Republika Srbija) */
+    grid-area: rep; /* Pozicija u grid-u prema 'rep' oblasti */
+    justify-self: left; /* Poravnanje ulevo unutar grid ćelije */
+    align-self: top; /* Poravnanje na vrh unutar grid ćelije */
 }
-.reg{
-    grid-area: reg;
-    justify-self: left;
-    align-self: top;
+
+.lk { /* Kontejner za naslov dokumenta (LIČNA KARTA) */
+    grid-area: lk; /* Pozicija u grid-u prema 'lk' oblasti */
+    justify-self: left; /* Poravnanje ulevo */
+    align-self: top; /* Poravnanje na vrh */
 }
-.diz{
-    grid-area: diz;
-    justify-self: left;
-    align-self: top;
+
+.fo { /* Stilizacija za glavnu fotografiju */
+    grid-area: fo; /* Pozicija u grid-u prema 'fo' oblasti */
+    justify-self: center; /* Centriranje horizontalno */
+    align-self: center; /* Centriranje vertikalno */
+    width: calc(100% - 10px); /* Dinamička širina slike, uz smanjenje od 10px za padding ili marginu */
+    height: auto; /* Automatsko prilagođavanje visine proporcionalno širini */
+    box-sizing: border-box; /* Uključuje padding i border u ukupnu veličinu elementa */
 }
-.dva{
-    grid-area: dva;
-    justify-self: left;
-    align-self: top;
+
+.pre { /* Kontejner za prezime */
+    grid-area: pre; /* Pozicija u grid-u prema 'pre' oblasti */
+    justify-self: left; /* Poravnanje ulevo */
+    align-self: top; /* Poravnanje na vrh */
 }
-.cg{
-    grid-area: cg;
-    justify-self: center;
-    align-self: end;
+
+.ime { /* Kontejner za ime */
+    grid-area: ime; /* Pozicija u grid-u prema 'ime' oblasti */
+    justify-self: left; /* Poravnanje ulevo */
+    align-self: top; /* Poravnanje na vrh */
 }
-.ss{
-    grid-area: ss;
-    justify-self: center;
-    align-self: center;
+
+.dr { /* Kontejner za datum rođenja */
+    grid-area: dr; /* Pozicija u grid-u prema 'dr' oblasti */
+    justify-self: left; /* Poravnanje ulevo */
+    align-self: top; /* Poravnanje na vrh */
 }
-.di{
-    grid-area: di;
-    justify-self: left;
-    align-self: top;
+
+.pol { /* Kontejner za pol */
+    grid-area: pol; /* Pozicija u grid-u prema 'pol' oblasti */
+    justify-self: left; /* Poravnanje ulevo */
+    align-self: top; /* Poravnanje na vrh */
 }
-.po{
-    grid-area: po;
-    justify-self: center;
-    align-self: center;
+.reg { /* Kontejner za registracioni broj */
+    grid-area: reg; /* Povezuje sa grid-template area 'reg' */
+    justify-self: left; /* Poravnanje ulevo unutar grid ćelije */
+    align-self: top; /* Poravnanje na vrh */
 }
+
+.diz { /* Kontejner za datum izdavanja */
+    grid-area: diz; /* Grid area za datum izdavanja */
+    justify-self: left; /* Poravnanje ulevo */
+    align-self: top; /* Poravnanje na vrh */
+}
+
+.dva { /* Kontejner za datum važenja */
+    grid-area: dva; /* Grid area za datum važenja */
+    justify-self: left; /* Poravnanje ulevo */
+    align-self: top; /* Poravnanje na vrh */
+}
+
+.cg { /* Slika grba (pun kolor) */
+    grid-area: cg; /* Grid area za grb */
+    justify-self: center; /* Centriranje horizontalno */
+    align-self: end; /* Poravnanje dole unutar grid ćelije */
+}
+
+.ss { /* Siva fotografija */
+    grid-area: ss; /* Grid area za sivi portret */
+    justify-self: center; /* Centriranje horizontalno */
+    align-self: center; /* Centriranje vertikalno */
+}
+
+.di { /* Kontejner za izdavaoca dokumenta */
+    grid-area: di; /* Grid area za izdavaoca */
+    justify-self: left; /* Poravnanje ulevo */
+    align-self: top; /* Poravnanje na vrh */
+}
+
+.po { /* Slika potpisa */
+    grid-area: po; /* Grid area za potpis */
+    justify-self: center; /* Centriranje horizontalno */
+    align-self: center; /* Centriranje vertikalno */
+}
+
 /*.licna-karta > * {
     border: 1px dashed #555555;
-}*/
-.velika-slova{
-    font-size: 16px;
-    font-weight: bold;
-    color: #901;
-    line-height: 10px;
+}*/ /* Debug stil, koristi se za prikaz grid linija tokom razvoja, može se aktivirati po potrebi */
+
+.velika-slova { /* Stil za velike slova: prezime, ime, datum... */
+    font-size: 16px; /* Veličina slova */
+    font-weight: bold; /* Podebljan tekst */
+    color: #901; /* Tamno crvena boja */
+    line-height: 10px; /* Razmak između linija */
 }
-.mala-slova {
-    font-size: 10px;
-    font-style: italic;
-    color: #aaa;
-    line-height: 6px;
+
+.mala-slova { /* Stil za mala slova: opisi polja, engleski prevodi */
+    font-size: 10px; /* Veličina slova */
+    font-style: italic; /* Kurziv stil */
+    color: #aaa; /* Siva boja */
+    line-height: 6px; /* Mali razmak između linija */
 }

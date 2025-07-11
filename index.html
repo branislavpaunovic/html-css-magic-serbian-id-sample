@@ -33,65 +33,72 @@
     <!-- This is the main content area of the webpage -->
     
     <body class="okvirkocke"> <!-- Start of body section -->
-        <h1 style="text-align: center;">Лична карта</h1>
-        <div class="okvirlk">
-            <div class="licna-karta">
-                <img alt="Grb-sivo" class="sg" src="assets/pic/Grb-sivo.png"/>
-                <div class="rep">
-                    <span class="velika-slova">Република Србија</span>
-                    <span class="mala-slova">/Republic of Serbia</span>
-                </div>
-                <div class="lk">
-                    <span class="velika-slova"> ЛИЧНА КАРТА</span>
-                    <span class="mala-slova">/IDENTITY CARD</span>
-                </div>
+        <h1 style="text-align: center;">Лична карта</h1> <!-- Glavni naslov stranice, semantički ispravno; tekst centriran inline stilom, bolje bi bilo koristiti klasu za čistoću koda -->
+            
+            <div class="okvirlk"> <!-- Glavni kontejner koji pozicionira sadržaj unutar tela stranice; koristi se za centriranje i pozicioniranje licne karte -->
+            
+                <div class="licna-karta"> <!-- Kontejner koji sadrži celu strukturu lične karte, primarni grid layout -->
                 
-                <img alt="Fotografija" class="fo" src="assets/pic/Fotografija.png"/>
+                    <img alt="Grb-sivo" class="sg" src="assets/pic/Grb-sivo.png"/> <!-- Slika grba u sivoj boji, dekorativni element; alt atribut postoji, što je dobro za SEO i pristupačnost -->
                 
-                <div class="pre">
-                    <span class="mala-slova">Презиме/Surname</span><br/>
-                    <span class="velika-slova">PAUNOVIĆ</span>
-                </div>
-                
-                <div class="ime">
-                    <span class="mala-slova">ИМЕ/Given name</span><br/>
-                    <span class="velika-slova">BRANISLAV</span>
-                </div>
+                    <div class="rep"> <!-- Kontejner za naziv države, deo zaglavlja lične karte -->
+                        <span class="velika-slova">Република Србија</span> <!-- Ime države, stilizovano velikim slovima preko CSS klase -->
+                        <span class="mala-slova">/Republic of Serbia</span> <!-- Ime države na engleskom jeziku, manjim slovima i italikom -->
+                    </div>
+                    <div class="lk"> <!-- Kontejner za naslov dokumenta unutar kartice -->
+                        <span class="velika-slova"> ЛИЧНА КАРТА</span> <!-- Naziv dokumenta na srpskom jeziku, velikim slovima -->
+                        <span class="mala-slova">/IDENTITY CARD</span> <!-- Naziv dokumenta na engleskom jeziku, manjim slovima i italikom -->
+                    </div>
 
-                <div class="dr">
-                    <span class="mala-slova">Датум рођења/Date of Birth</span><br/>
-                    <span class="velika-slova">25.09.1976.</span>
-                </div>
+                    <img alt="Fotografija" class="fo" src="assets/pic/Fotografija.png"/> <!-- Slika vlasnika lične karte; alt atribut postoji radi pristupačnosti, klasa 'fo' koristi se za pozicioniranje unutar grida -->
 
-                <div class="pol">
-                    <span class="mala-slova">ПОЛ/Sex</span><br/>
-                    <span class="velika-slova">М</span>
-                </div>
+                    <div class="pre"> <!-- Kontejner za prezime osobe -->
+                        <span class="mala-slova">Презиме/Surname</span><br/> <!-- Oznaka polja za prezime, prikazano dvojezično; koristi se <br/> za prelazak u novi red -->
+                        <span class="velika-slova">PAUNOVIĆ</span> <!-- Vrednost prezimena, stilizovano velikim slovima -->
+                    </div>
 
-                <div class="reg">
-                    <span class="mala-slova">Рег.бр./Reg No</span><br/>
-                    <span class="velika-slova">007773620</span>
-                </div>
+                    <div class="ime"> <!-- Kontejner za ime osobe -->
+                        <span class="mala-slova">ИМЕ/Given name</span><br/> <!-- Oznaka polja za ime, dvojezično; koristi se <br/> za novi red -->
+                        <span class="velika-slova">BRANISLAV</span> <!-- Vrednost imena, velikim slovima -->
+                    </div>
 
-                <div class="diz">
-                    <span class="mala-slova">Датум издавања/issuing date</span><br/>
-                    <span class="velika-slova">09.02.2016.</span>
-                </div>
+                    <div class="dr"> <!-- Kontejner za datum rođenja -->
+                        <span class="mala-slova">Датум рођења/Date of Birth</span><br/> <!-- Oznaka polja za datum rođenja, dvojezično -->
+                        <span class="velika-slova">25.09.1976.</span> <!-- Vrednost datuma rođenja, velikim slovima -->
+                    </div>
 
-                <div class="dva">
-                    <span class="mala-slova">Важи до/Valid until</span><br/>
-                    <span class="velika-slova">09.02.2026.</span>
-                </div>
-                
-                <img alt="Grb" class="cg" src="assets/pic/Grb.png"/>
-                <img alt="Fotografija-sivo" class="ss" src="assets/pic/Fotografija-sivo.png"/>
-                
-                <div class="di">
-                    <span class="mala-slova">Документ издаје/Issuing authority</span><br/>
-                    <span class="velika-slova">ПУ САВСКИ ВЕНАЦ</span>
-                </div>
-                <img alt="Potpis" class="po" src="assets/pic/Potpis.png"/>
-            </div>
-        </div>
-    </body>
-</html>
+                    <div class="pol"> <!-- Kontejner za pol osobe -->
+                        <span class="mala-slova">ПОЛ/Sex</span><br/> <!-- Oznaka polja za pol, dvojezično -->
+                        <span class="velika-slova">М</span> <!-- Vrednost pola, velika slova; M znači muški -->
+                    </div>
+
+                    <div class="reg"> <!-- Kontejner za registracioni broj lične karte -->
+                        <span class="mala-slova">Рег.бр./Reg No</span><br/> <!-- Oznaka polja za registracioni broj, dvojezično -->
+                        <span class="velika-slova">007773620</span> <!-- Vrednost registracionog broja, velikim slovima -->
+                    </div>
+
+                    <div class="diz"> <!-- Kontejner za datum izdavanja -->
+                        <span class="mala-slova">Датум издавања/issuing date</span><br/> <!-- Oznaka polja za datum izdavanja, dvojezično -->
+                        <span class="velika-slova">09.02.2016.</span> <!-- Vrednost datuma izdavanja, velikim slovima -->
+                    </div>
+
+                    <div class="dva"> <!-- Kontejner za datum važenja -->
+                        <span class="mala-slova">Важи до/Valid until</span><br/> <!-- Oznaka polja za datum važenja, dvojezično -->
+                        <span class="velika-slova">09.02.2026.</span> <!-- Vrednost datuma važenja, velikim slovima -->
+                    </div>
+
+                    <img alt="Grb" class="cg" src="assets/pic/Grb.png"/> <!-- Slika grba, pun kolor; koristi se za dekoraciju ili autentičnost dizajna, alt tekst je ispravno postavljen -->
+
+                    <img alt="Fotografija-sivo" class="ss" src="assets/pic/Fotografija-sivo.png"/> <!-- Siva varijanta fotografije, verovatno radi vizuelnog efekta ili pozadine, alt tekst postoji -->
+
+                    <div class="di"> <!-- Kontejner za naziv organa koji izdaje dokument -->
+                        <span class="mala-slova">Документ издаје/Issuing authority</span><br/> <!-- Oznaka polja za izdavaoca dokumenta, dvojezično -->
+                        <span class="velika-slova">ПУ САВСКИ ВЕНАЦ</span> <!-- Naziv policijske uprave koja je izdala ličnu kartu, velikim slovima -->
+                    </div>
+
+                    <img alt="Potpis" class="po" src="assets/pic/Potpis.png"/> <!-- Slika potpisa vlasnika ili verifikacionog potpisa, alt tekst ispravno postavljen -->
+                    
+             </div> <!-- Zatvara glavni kontejner za licnu kartu; završetak strukture grid layout-a -->
+        </div> <!-- Zatvara kontejner za pozicioniranje licne karte unutar stranice -->
+    </body> <!-- Zatvara body sekciju; kraj glavnog sadržaja stranice -->
+</html> <!-- Zatvara HTML dokument; obavezan deo svakog HTML fajla -->
