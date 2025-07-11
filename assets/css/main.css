@@ -1,0 +1,144 @@
+html{
+    font-family: 'Calibri', sans-serif;
+    background: #ffffff;
+}
+.tpr {
+    color: #7D1F1F;
+}
+.tsg {
+    color: #555555;
+}
+.tab {
+    color: #6699CC;
+}
+.okvirkocke{
+    position: relative;
+    border: 2px solid #323232;
+    width: 100vw;
+    height: 100vh;
+}
+.okvirlk{
+    position: absolute;
+    background-color: #ededed;
+    top: 25%;
+    right: 25%;
+    bottom: 25%;
+    left: 25%;
+    justify-items: center;
+    align-content: center;
+}
+.licna-karta{
+    align-content: center;
+    justify-content: center ;
+    display:grid ;
+    width: 510px;
+    height: 330px;
+    padding: 4px, 8px;
+    border: 3px solid #323232;
+    border-radius: 15px;
+    grid-template:  "sg bp rep rep rep"
+                    "sg bp lk lk lk"
+                    "fo fo pre pre cg"
+                    "fo fo ime ime cg"
+                    "fo fo dr dr cg"
+                    "fo fo pol reg ss"
+                    "fo fo diz diz ss"
+                    "fo fo dva dva ss"
+                    "di di di di po";
+    grid-template-columns: 80px 80px 100px 100px 130px;
+    grid-template-rows: 30px 30px 35px 35px 35px 35px 35px 35px 35px;
+}           
+
+.sg{
+    grid-area: sg;
+    justify-self: center;
+    align-self: center;
+}
+.rep{
+    grid-area: rep;
+    justify-self: left;
+    align-self: top;
+}
+.lk{
+    grid-area:lk;
+    justify-self: left;
+    align-self: top;
+}
+.fo{
+    grid-area: fo;
+    justify-self: center;
+    align-self: center;
+    width: calc(100% - 10px);
+    height: auto; 
+    box-sizing: border-box;
+}
+.pre{
+    grid-area: pre;
+    justify-self: left;
+    align-self: top;
+}
+.ime{
+    grid-area: ime;
+    justify-self: left;
+    align-self: top;
+}
+.dr{
+    grid-area: dr;
+    justify-self: left;
+    align-self: top;
+}
+.pol{
+    grid-area: pol;
+    justify-self: left;
+    align-self: top;
+}
+.reg{
+    grid-area: reg;
+    justify-self: left;
+    align-self: top;
+}
+.diz{
+    grid-area: diz;
+    justify-self: left;
+    align-self: top;
+}
+.dva{
+    grid-area: dva;
+    justify-self: left;
+    align-self: top;
+}
+.cg{
+    grid-area: cg;
+    justify-self: center;
+    align-self: end;
+}
+.ss{
+    grid-area: ss;
+    justify-self: center;
+    align-self: center;
+}
+.di{
+    grid-area: di;
+    justify-self: left;
+    align-self: top;
+}
+.po{
+    grid-area: po;
+    justify-self: center;
+    align-self: center;
+}
+/*.licna-karta > * {
+    border: 1px dashed #555555;
+}*/
+.velika-slova{
+    font-size: 16px;
+    font-weight: bold;
+    color: #901;
+    line-height: 10px;
+}
+.mala-slova {
+    font-size: 10px;
+    font-style: italic;
+    color: #aaa;
+    line-height: 6px;
+}
