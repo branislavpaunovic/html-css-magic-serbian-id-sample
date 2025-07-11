@@ -18,8 +18,8 @@ html { /* Definiše osnovne stilove za ceo dokument */
 .okvirkocke { /* Glavni kontejner koji pokriva celu stranicu */
     position: relative; /* Postavlja relativnu poziciju za lakše pozicioniranje unutrašnjih elemenata */
     border: 2px solid #323232; /* Tanka tamno siva ivica oko celog prozora */
-    width: 100vw; /* Širina preko celog viewport-a */
-    height: 100vh; /* Visina preko celog viewport-a */
+    width: 98vw; /* Širina preko celog viewport-a */
+    height: 98vh; /* Visina preko celog viewport-a */
 }
 
 .okvirlk { /* Kontejner unutar okvirkocke koji pozicionira ličnu kartu */
